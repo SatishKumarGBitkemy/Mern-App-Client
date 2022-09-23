@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import querystring from "query-string";
 import axios from "axios";
 import { useHistory, useLocation } from "react-router";
-const baseUrl = "http://localhost:5000/api/user";
+const baseUrl = process.env.SERVER_URL; // "http://localhost:5000/api/user";
 export default function Form() {
   const location = useLocation();
   const history = useHistory();
